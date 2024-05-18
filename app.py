@@ -156,7 +156,7 @@ with tab2:
                     nodes.append(features + [counts[i]])
                 results.append(nodes)
 
-            traffic_model = load_model(weights='models/stgcn_model_final.pth', edges = "data/edges.csv")
+            traffic_model = load_model(weights='weights/stgcn_model_final.pth', edges = "data/edges.csv")
             result = infer(traffic_model, results)
             st.write(result)
 
@@ -179,5 +179,5 @@ with tab2:
 - Anomaly detection to compare predicted traffic with actual traffic to detect unusual traffic due to accident or congestion.
 
 ### Note
-- This is trained and tested on dummy data. The model is verified to capture cyclic traffic patterns based on current traffic patterns and time. For accurate results real live data is
+- This is trained and tested on dummy data. The model is verified to capture cyclic traffic patterns based on current traffic patterns and time. For accurate results real live data is needed.
 """)
